@@ -3,14 +3,12 @@ import { OFFICES_API } from '../../api.js'
 
 function AvailableOffices() {
   const [search, setSearch] = useState('')
-  // Result of the last finished request, and which search text it was for
+  
   const [result, setResult] = useState({ query: null, offices: [], error: '' })
   const [deletingId, setDeletingId] = useState(null)
 
   const query = search.trim()
 
-  // Load offices whenever the search text changes.
-  // Empty search -> GET /all, otherwise GET /search?name=...
   useEffect(() => {
     let ignore = false
     const url = query
@@ -35,13 +33,13 @@ function AvailableOffices() {
         }
       })
 
-    // Ignore a slow, older response if the user has typed again
+   
     return () => {
       ignore = true
     }
   }, [query])
 
-  const loading = result.query === null // only true before the first load finishes
+  const loading = result.query === null 
   const { offices, error } = result
 
   const handleDelete = async (office) => {

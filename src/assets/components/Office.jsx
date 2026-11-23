@@ -28,7 +28,7 @@ function Office() {
         setName('')
         setOfficeNumber('')
       } else {
-        // e.g. 409 "Office already exists"
+        
         alert(await res.text())
       }
     } catch {
