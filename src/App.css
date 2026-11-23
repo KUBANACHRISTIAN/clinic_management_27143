@@ -1,0 +1,167 @@
+/* ---------- Page layout ---------- */
+.page {
+  text-align: left;
+  padding: 0 32px 32px;
+}
+
+.page h1 {
+  margin: 24px 0;
+}
+
+/* ---------- Top navigation ---------- */
+.nav {
+  display: flex;
+  gap: 8px;
+  padding: 12px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav button {
+  font: inherit;
+  font-size: 15px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.nav button.active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+/* ---------- Search box ---------- */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search label {
+  color: var(--text-h);
+}
+
+.search input {
+  font: inherit;
+  font-size: 16px;
+  padding: 6px 10px;
+  width: 260px;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+/* ---------- Offices table ---------- */
+.office-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.office-table th,
+.office-table td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.office-table th {
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.office-table td {
+  color: var(--text-h);
+}
+
+.office-table tbody tr:hover {
+  background: var(--social-bg);
+}
+
+.office-table th:first-child,
+.office-table td:first-child {
+  width: 60px;
+}
+
+.office-table th:last-child,
+.office-table td:last-child {
+  width: 180px;
+}
+
+.office-table td:last-child {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.office-table .table-message {
+  text-align: center;
+  color: var(--text);
+  padding: 24px;
+}
+
+.office-table .table-message.error {
+  color: #c0392b;
+}
+
+.delete-btn,
+.update-btn {
+  font: inherit;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  border: 1px solid #c0392b;
+  background: transparent;
+  color: #c0392b;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #c0392b;
+  color: #fff;
+}
+
+.delete-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.update-btn {
+  border: 1px solid #2980b9;
+  background: transparent;
+  color: #2980b9;
+}
+
+.update-btn:hover {
+  background: #2980b9;
+  color: #fff;
+}
+
+/* ---------- Save office form ---------- */
+.office-form {
+  display: grid;
+  grid-template-columns: max-content 220px;
+  gap: 8px 16px;
+  align-items: center;
+}
+
+.office-form input {
+  font: inherit;
+  font-size: 15px;
+  padding: 2px 4px;
+}
+
+.office-form div {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+}
